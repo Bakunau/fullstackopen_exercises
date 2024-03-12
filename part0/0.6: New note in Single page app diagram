@@ -1,0 +1,9 @@
+sequenceDiagram
+
+1. The user interacts with the SPA frontend, which displays existing notes and provides a form for creating new notes.
+2. Then the user performs an action -> clicking a button to create a new note, an event handler in the frontend captures the event.
+3. The event handler triggers an HTTPrequest to the server, using the POST method, sending the note data.
+4. The server receives the request at an appropriate API endpoint, processes the data, and stores it in a database or some form of persistent storage.
+5. The server responds with an HTTP response, typically confirming the successful creation of the note.
+6. The frontend receives the response and updates the interface accordingly, often by dynamically rendering the new note (without requiring a full page reload!).
+7. The user sees the updated interface in their browser, showing the newly created note along with all existing notes.
