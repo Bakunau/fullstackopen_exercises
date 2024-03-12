@@ -1,0 +1,12 @@
+sequenceDiagram
+
+   1. User writes note and then clicks (press) the <button>.
+   2. Clicked button sends the note (user <input>) to the server. This is done through an HTTP request, using the POST method.
+   3. File new_note is created on the server and it's status code is "302 Found" (redirection), 
+   the request method is "POST" - this file reloads the page.
+   4. Server asks the browser to make a new HTTP GET request to (in my case) /exampleapp/notes location.
+   5. Data is sent as the body of the Post request.
+   6. Server creates a new note object and adds it to an array called notes.
+   5. After reload we have: new_note, notes, main.css, main.js, data.json (the note user wrote is on the server, 
+   which will dissapear after retart of the server)
+   
